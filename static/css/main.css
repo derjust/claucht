@@ -1,0 +1,68 @@
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+#connectionState {
+	float:right;
+}
+
+#container{
+	position:relative;
+}
+
+#messages{
+	position:absolute;
+}
+
+body {
+	background-color: #000;
+}
+
+#slideshow{
+	position:absolute;
+	overflow: hidden;
+	width: 1140px;
+}
+
+#slideshow img {
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.message {
+	background: rgb(238, 238, 238); /* Fall-back for browsers that don't support rgba */
+	background: rgba(238, 238, 238, .75);
+	padding:10px;
+	margin:10px;
+	-moz-border-radius: 25px;
+	-webkit-border-radius: 25px;
+	border-radius: 25px; /* future proofing */
+	-khtml-border-radius: 25px; /* for old Konqueror browsers */
+}
+
+.icon {
+        background-position:0 0;
+        background-repeat:no-repeat;
+	color: #eee;
+}
+
+.mobile-icon {
+	background-image:url(../img/mobile.png);
+	padding-left: 33px;
+}
+
+.twitter-icon{
+	background-image:url(../img/twitter.png);
+	padding-left: 24px;
+}
+
+.email-icon {
+	background-position:0 -5px;
+        background-image:url(../img/email.png);
+	padding-left:33px;
+}
+
+.facebook-icon {
+        background-image:url(../img/facebook.png);
+	padding-left: 31px;
+}
+
