@@ -6,7 +6,7 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <title>Claucht</title>
+        <title>Claucht - Administration</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -31,17 +31,9 @@
     <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
       <div class="container">
         <div class="navbar-header">
-          <span class="navbar-brand">Send your message or picture to 
-            <span id="hostMobile" class="icon mobile-icon">+49 176 111 111</span> or 
-            <span id="hostTwitter" class="icon twitter-icon">@derjust</span> or 
-            <span id="hostEmail" class="icon email-icon">zeeman@zeeman.de</span> or
-            <span id="hostFacebook" class="icon facebook-icon">sebastian.just6</span>
+          <span class="navbar-brand">Claucht - Administration 
 	  </span>
         </div>
-       <div id="connectionState">       
-         <span id="connectionStateUnknown" class="navbar-brand glyphicon glyphicon glyphicon-question-sign" aria-hidden="true"></span>
-         <span id="connectionStateBroken" class="navbar-brand glyphicon glyphicon glyphicon-remove-sign" style="display:none" aria-hidden="true"></span>
-         <span id="connectionStateOk" class="navbar-brand glyphicon glyphicon glyphicon-ok-sign" style="display:none" aria-hidden="true"></span>
     </div>
     <div class="navbar-collapse collapse">
         </div><!--/.navbar-collapse -->
@@ -49,23 +41,21 @@
     </div>
 
     <div class="container">
-      <div id="slideshow">
-        <div class="item"><img src='http://lorempixel.com/128/801' /></div>
-        <div class="item"><img src='http://lorempixel.com/1280/802' /></div>
-
+      <div id="newMessageCreation">
+        <form method="POST" action="admin/newMessage">
+          <label for="newMessageBody">Message:</label>
+          <input type="text" id="newMessageBody" name="message" />
+          <input type="submit" value="Send" />
+        </form>
         <hr>
         <footer>
           <p>&copy; Claucht 2014</p>
         </footer>
       </div>
-      <div id="messages">
-      </div>
 
     </div> <!-- /container -->        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.1.min.js"><\/script>')</script>
         <script src="js/vendor/bootstrap.min.js"></script>
-        <script src="js/slick.js"></script>
-	<script src="js/engine.io.js"></script>
         <script src="js/plugins.js"></script>
         <script src="js/main.js"></script>
 
