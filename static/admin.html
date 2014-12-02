@@ -48,6 +48,29 @@
           <input type="submit" value="Send" />
         </form>
         <hr>
+        <form method="POST" action="api/contactConfig">
+          <label for="twitterAccount">Twitter:</label>
+          <input type="checkbox" id="twitterActive" name="twitterActive" />
+          <input type="text" id="twitterAccount" name="twitterAccount" />
+
+          <label for="facebookAccount">Facebook:</label>
+          <input type="checkbox" id="facebookActive" name="facebookActive" />
+          <input type="text" id="facebookAccount" name="facebookAccount" />
+
+          <label for="phoneAccount">Phone:</label>
+          <input type="checkbox" id="phoneActive" name="phoneActive" />
+          <input type="text" id="phoneAccount" name="phoneAccount" />
+
+          <label for="emailAccount">Email:</label>
+          <input type="checkbox" id="emailActive" name="emailActive" />
+          <input type="text" id="emailAccount" name="emailAccount" />
+
+          <input type="submit" value="Send" />
+        </form>
+
+
+
+        <hr>
         <footer>
           <p>&copy; Claucht 2014</p>
         </footer>

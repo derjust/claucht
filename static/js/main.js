@@ -12,8 +12,39 @@ function newMessage(bodyText) {
 	newMessage.show(1500);
 
 	setTimeout(function(){ newMessage.hide(2000, function finallyRemove(){newMessage.remove()}); }, 10 * 1000);
+}
 
-
+function initialize() {
+	$.ajax('api/contactConfig')
+	.done(function(data){
+		if (data.phoneActive) {
+			$('#contactPhone').append(data.phoneAccount);
+			$('#contactPhone').show();
+		} else {
+			$('#contactPhone').hide();
+		}
+		if (data.twitterActive) {
+			$('#contactTwitter').append(data.twitterAccount);
+			$('#contactTwitter').show();
+		} else {
+			$('#contactTwitter').hide();
+		}
+		if (data.facebookActive) {
+			$('#contactFacebook').append(data.facebookAccount);
+			$('#contactFacebook').show();
+		} else {
+			$('#contactFacebook').hide();
+		}
+		if (data.emailActive) {
+			$('#contactEmail').append(data.emailAccount);
+			$('#contactEmail').show();
+		} else {
+			$('#contactEmail').hide();
+		}
+	})
+	.fail(function(jqXHR, textStatus, errorThrown){
+		console.log(errorThrown);
+	});
 }
 
 function handleIncommingCommand(command) {
@@ -26,14 +57,13 @@ function handleIncommingCommand(command) {
 		case 'newMessage':
 			newMessage(command.body);
 			break;
-
+		case 'reset':
+			initialize();
+			break;
 		default:
 			console.log('No action defined!');
 			break;
 	}
-
-
-
 }
 
 var socket;
@@ -92,4 +122,6 @@ $(document).ready(function(){
 	});
 
 	var socket = createSocket();
+
+	initialize();
 });

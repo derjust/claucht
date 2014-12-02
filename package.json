@@ -1,0 +1,29 @@
+{
+  "name": "claucht",
+  "version": "0.0.1",
+  "description": "claucht\r =======",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/derjust/claucht.git"
+  },
+  "author": "derjust",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/derjust/claucht/issues"
+  },
+  "homepage": "https://github.com/derjust/claucht",
+  "dependencies": {
+    "body-parser": "^1.9.3",
+    "engine.io": "^1.4.3",
+    "express": "^4.10.4",
+    "mongoose": "^3.8.19",
+    "morgan": "^1.5.0",
+    "postal": "^0.10.3",
+    "serve-static": "^1.7.1",
+    "underscore": "^1.7.0"
+  }
+}
