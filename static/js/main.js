@@ -1,11 +1,15 @@
 var row = $("#messages");
 
-function newMessage(bodyText) {
+function newMessage(from, bodyText) {
 	var newMessage = $('<div />').attr('class', 'col-md-3 message').css('display', 'none');
 
-	var bodyMessage = $('<p />');
+	var sender = $('<p />').attr('class', 'sender');
+	sender.append(from);
+
+	var bodyMessage = $('<p />').attr('class', 'content');
 	bodyMessage.append(bodyText);
 
+	newMessage.append(sender);
 	newMessage.append(bodyMessage);
 
 	row.append(newMessage);
@@ -55,7 +59,7 @@ function handleIncommingCommand(command) {
 
 	switch (command.action) {
 		case 'newMessage':
-			newMessage(command.body);
+			newMessage(command.from, command.body);
 			break;
 		case 'reset':
 			initialize();

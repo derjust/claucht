@@ -43,6 +43,7 @@ body {
         background-position:0 0;
         background-repeat:no-repeat;
 	color: #eee;
+	padding-right: 1em;
 }
 
 .mobile-icon {
@@ -53,6 +54,9 @@ body {
 .twitter-icon{
 	background-image:url(../img/twitter.png);
 	padding-left: 24px;
+}
+.twitter-icon:before {
+	content: "@";
 }
 
 .email-icon {
